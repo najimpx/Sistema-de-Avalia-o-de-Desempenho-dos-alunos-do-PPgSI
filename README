@@ -2,3 +2,12 @@ Sistema de Avaliação de Desempenho dos alunos do PPgSI
 
 Instalar o maven no pc https://phoenixnap.com/kb/install-maven-windows
 
+Banco de dados no Postgresql 
+No windows 
+  Abra o shell do Postgresql (psql)
+
+  Execute em sequencia:
+
+  CREATE USER sipadmin WITH ENCRYPTED PASSWORD 'sipadmin';
+  CREATE DATABASE sip WITH OWNER = sipadmin ENCODING = 'UTF8' TABLESPACE = pg_default CONNECTION LIMIT = -1;
+  GRANT ALL PRIVILEGES ON DATABASE plantei TO sipadmin;
