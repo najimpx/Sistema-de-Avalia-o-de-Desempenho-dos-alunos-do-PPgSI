@@ -11,3 +11,5 @@ No windows
   CREATE USER sipadmin WITH ENCRYPTED PASSWORD 'sipadmin';
   CREATE DATABASE sip WITH OWNER = sipadmin ENCODING = 'UTF8' TABLESPACE = pg_default CONNECTION LIMIT = -1;
   GRANT ALL PRIVILEGES ON DATABASE plantei TO sipadmin;
+
+Para testar controles usar os @getmapping /api/usuario/lista ex: http://localhost:8080/api/usuario/lista
