@@ -1,0 +1,7 @@
+com\plantei\planteibackend\securingweb\MvcConfig.class
+com\plantei\planteibackend\exception\ResourceNotFoundException.class
+com\plantei\planteibackend\controller\UserController.class
+com\plantei\planteibackend\securingweb\WebSecurityConfig.class
+com\plantei\planteibackend\PlanteiBackendApplication.class
+com\plantei\planteibackend\model\Usuario.class
+com\plantei\planteibackend\repository\RepositorioUsuario.class
