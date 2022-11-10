@@ -25,16 +25,16 @@ public class Aluno {
     @Column
     private String link_curriculo_lattes;
     @Column
+    private String tipo_de_curso;
+    @Column
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date data_entrada;
     @Column
     private String resultado_avaliacao_recente;
     @Column
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private Date prazo_maximo_inscricao_programa_qualificacao;
+    private String prazo_maximo_inscricao_programa_qualificacao;
     @Column
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private Date prazo_maximo_dissertacao;
+    private String prazo_maximo_dissertacao;
     
     public Aluno() {
     }
@@ -58,16 +58,19 @@ public class Aluno {
     public String getLink_curriculo_lattes() {
         return link_curriculo_lattes;
     }
+    public String getTipo_de_curso() {
+        return tipo_de_curso;
+    }
     public Date getData_entrada() {
         return data_entrada;
     }
     public String getResultado_avaliacao_recente() {
         return resultado_avaliacao_recente;
     }
-    public Date getPrazo_maximo_inscricao_programa_qualificacao() {
+    public String getPrazo_maximo_inscricao_programa_qualificacao() {
         return prazo_maximo_inscricao_programa_qualificacao;
     }
-    public Date getPrazo_maximo_dissertacao() {
+    public String getPrazo_maximo_dissertacao() {
         return prazo_maximo_dissertacao;
     }
     
@@ -90,16 +93,19 @@ public class Aluno {
     public void setLink_curriculo_lattes(String link_curriculo_lattes) {
         this.link_curriculo_lattes = link_curriculo_lattes;
     }
+    public void setTipo_de_curso(String tipo_de_curso) {
+        this.tipo_de_curso = tipo_de_curso;
+    }
     public void setData_entrada(Date data_entrada) {
         this.data_entrada = data_entrada;
     }
     public void setResultado_avaliacao_recente(String resultado_avaliacao_recente) {
         this.resultado_avaliacao_recente = resultado_avaliacao_recente;
     }
-    public void setPrazo_maximo_inscricao_programa_qualificacao(Date prazo_maximo_inscricao_programa_qualificacao) {
+    public void setPrazo_maximo_inscricao_programa_qualificacao(String prazo_maximo_inscricao_programa_qualificacao) {
         this.prazo_maximo_inscricao_programa_qualificacao = prazo_maximo_inscricao_programa_qualificacao;
     }
-    public void setPrazo_maximo_dissertacao(Date prazo_maximo_dissertacao) {
+    public void setPrazo_maximo_dissertacao(String prazo_maximo_dissertacao) {
         this.prazo_maximo_dissertacao = prazo_maximo_dissertacao;
     }
 }
