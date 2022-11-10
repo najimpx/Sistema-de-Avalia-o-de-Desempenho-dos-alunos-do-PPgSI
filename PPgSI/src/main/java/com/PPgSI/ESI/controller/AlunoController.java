@@ -19,13 +19,13 @@ public class AlunoController {
     private RepositorioAluno repositorioAluno;
 
     /**
-     * <p>Retorna uma lista com todas as listas de plantas cadastradas no banco de dados.</p>
+     * <p>Retorna uma lista com todas as listas de alunos cadastrados no banco de dados.</p>
      * Path: api/aluno/listar
      *
      * @return JSON com todas as listas cadastradas no banco de dados.
      */
     @GetMapping("/listar")
-    public List<Aluno> getAllListaFavoritos() {
+    public List<Aluno> getAllAluno() {
         return repositorioAluno.findAll();
     }
 
@@ -35,7 +35,7 @@ public class AlunoController {
      * body da requisicao.</p>
      * Path: api/aluno/add
      *
-     * @param planta Dados JSON da nova planta que sera cadastrada.
+     * @param alunos Dados JSON do novo aluno que sera cadastrada.
      */
     @PostMapping(path = "/add", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Aluno> addAluno(@RequestBody Aluno aluno) {
@@ -74,7 +74,7 @@ public class AlunoController {
      * @param id ID da lista que deve ser removida.
      */
     @DeleteMapping("/remover/{id}")
-    public ResponseEntity<Long> deleteListById(@PathVariable Long id) {
+    public ResponseEntity<Long> deleteAlunoById(@PathVariable Long id) {
     	repositorioAluno.deleteById(id);
 
         return ResponseEntity.ok(id);

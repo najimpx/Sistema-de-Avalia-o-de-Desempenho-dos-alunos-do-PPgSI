@@ -25,26 +25,26 @@ public class OrientadorController {
 	    private RepositorioOrientador repositorioOrientador;
 
 	    /**
-	     * <p>Retorna uma lista com todas as listas de plantas cadastradas no banco de dados.</p>
+	     * <p>Retorna uma lista com todas as listas de orientadores cadastrados no banco de dados.</p>
 	     * Path: api/orientador/listar
 	     *
 	     * @return JSON com todas as listas cadastradas no banco de dados.
 	     */
 	    @GetMapping("/listar")
-	    public List<Orientador> getAllListaFavoritos() {
+	    public List<Orientador> getAllOrientador() {
 	        return repositorioOrientador.findAll();
 	    }
 
 
 	    /**
-	     * <p>Cadastra um novo aluno no banco de dados. Seus dados (JSON) sao passados no
+	     * <p>Cadastra um novo orientador no banco de dados. Seus dados (JSON) sao passados no
 	     * body da requisicao.</p>
 	     * Path: api/orientador/add
 	     *
-	     * @param planta Dados JSON da nova planta que sera cadastrada.
+	     * @param orientador Dados JSON do novo orientador que sera cadastrado.
 	     */
 	    @PostMapping(path = "/add", consumes = MediaType.APPLICATION_JSON_VALUE)
-	    public ResponseEntity<Orientador> addAluno(@RequestBody Orientador orientador) {
+	    public ResponseEntity<Orientador> addOrientador(@RequestBody Orientador orientador) {
 	    	repositorioOrientador.save(orientador);
 
 	        return ResponseEntity.ok(orientador);
@@ -54,9 +54,9 @@ public class OrientadorController {
 	    
 	    
 	    @PutMapping(path = "/alterarDados/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-	    public ResponseEntity<Orientador> updateAluno(@PathVariable long id, @RequestBody Orientador dadosOrientador) throws ResourceNotFoundException {
+	    public ResponseEntity<Orientador> updateOrientador(@PathVariable long id, @RequestBody Orientador dadosOrientador) throws ResourceNotFoundException {
 	    	Orientador orientadorAlterado = repositorioOrientador.findById(id)
-	                .orElseThrow(() -> new ResourceNotFoundException("Planta com id '" + id + "' nao foi encontrado"));
+	                .orElseThrow(() -> new ResourceNotFoundException("Orientador com id '" + id + "' nao foi encontrado"));
 
 	    	orientadorAlterado.setnUSP(dadosOrientador.getnUSP());
 	    	orientadorAlterado.setEmailUSP(dadosOrientador.getEmailUSP());
@@ -67,13 +67,13 @@ public class OrientadorController {
 	    }
 	    
 	    /**
-	     * Remove um aluno cadastrado no banco de dados.
-	     * Path: api/aluno/remover/{id}
+	     * Remove um orientador cadastrado no banco de dados.
+	     * Path: api/orientador/remover/{id}
 	     *
 	     * @param id ID da lista que deve ser removida.
 	     */
 	    @DeleteMapping("/remover/{id}")
-	    public ResponseEntity<Long> deleteListById(@PathVariable Long id) {
+	    public ResponseEntity<Long> deleteOrientadorById(@PathVariable Long id) {
 	    	repositorioOrientador.deleteById(id);
 
 	        return ResponseEntity.ok(id);
