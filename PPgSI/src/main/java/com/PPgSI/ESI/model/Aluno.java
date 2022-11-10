@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id_aluno;
     @Column
     private Long nUSP ;

@@ -6,14 +6,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.*;
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 @Entity
-public class Coordenador_Programa {
+@Table(name = "orientador")
+public class Orientador {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column
-	private Long id_coordenador;
+	private Long id_orientador;
 	@Column
     private Long nUSP ;
     @Column
@@ -21,11 +20,11 @@ public class Coordenador_Programa {
     @Column
     private String nome;
    
-    public Coordenador_Programa() {
+    public Orientador() {
     }
     
     public Long getId() {
-        return id_coordenador ;
+        return id_orientador ;
     }
     
     public Long getnUSP() {
@@ -40,8 +39,8 @@ public class Coordenador_Programa {
         return nome;
     }
     
-    public void setId(Long id_coordenador) {
-        this.id_coordenador = id_coordenador ;
+    public void setId(Long id_orientador) {
+        this.id_orientador = id_orientador ;
     }
     
     public void setnUSP(Long nUSP) {
@@ -55,4 +54,5 @@ public class Coordenador_Programa {
     public void setNome(String nome) {
     	this.nome = nome;
     }
+
 }
