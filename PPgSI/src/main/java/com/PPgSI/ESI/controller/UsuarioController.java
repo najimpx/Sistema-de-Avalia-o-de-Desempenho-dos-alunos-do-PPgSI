@@ -2,6 +2,7 @@ package com.PPgSI.ESI.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,6 +22,7 @@ import com.PPgSI.ESI.repository.RepositorioUsuario;
 @RequestMapping("/api/Usuario")
 public class UsuarioController {
 	
+	@Autowired
 	private RepositorioUsuario repositorioUsuario;
 	
     @GetMapping("/listar")

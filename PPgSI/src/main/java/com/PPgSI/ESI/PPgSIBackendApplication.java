@@ -11,5 +11,4 @@ public class PPgSIBackendApplication {
         //temporario
         SpringApplication.run(PPgSIBackendApplication.class, args);
     }
-
 }

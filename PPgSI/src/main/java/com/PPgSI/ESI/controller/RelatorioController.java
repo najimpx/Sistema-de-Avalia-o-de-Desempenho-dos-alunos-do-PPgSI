@@ -2,6 +2,7 @@ package com.PPgSI.ESI.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,6 +21,7 @@ import com.PPgSI.ESI.repository.RepositorioRelatorio;
 @RequestMapping("/api/Relatorio")
 public class RelatorioController {
 
+	@Autowired
 	private RepositorioRelatorio repositorioRelatorio;
 	
 

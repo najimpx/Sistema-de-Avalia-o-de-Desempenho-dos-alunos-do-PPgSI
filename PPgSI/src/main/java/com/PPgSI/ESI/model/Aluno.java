@@ -27,7 +27,7 @@ public class Aluno {
     @Column
     private String tipo_de_curso;
     @Column
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-mm-dd")
     private Date data_entrada;
     @Column
     private String resultado_avaliacao_recente;

@@ -23,6 +23,7 @@ import com.PPgSI.ESI.repository.RepositorioHistorico;
 @RequestMapping("/api/Historico")
 public class HistoricoController {
 	
+	@Autowired
     private RepositorioHistorico repositorioHistorico;
 
     @GetMapping("/listar")
